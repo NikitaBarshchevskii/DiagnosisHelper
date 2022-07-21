@@ -9,7 +9,7 @@ using Gtk
 include(joinpath(pathof(ImPlot),"..","..","demo","Renderer.jl"))
 using .Renderer
 
-# include(joinpath(pathof(CImGui), "..", "..", "demo", "demo.jl"))
+include(joinpath(pathof(CImGui), "..", "..", "demo", "demo.jl"))
 
 mutable struct Vars
     file::String
@@ -19,7 +19,7 @@ mutable struct Vars
     conclusion::String
     
     function Vars()
-        file = "configs/configTest.json"
+        file = "configs/configRewrite.json"
         data = JSON.parsefile(file)
         names = data["groupnames"]
         check = []
@@ -39,6 +39,7 @@ function ui(v::Vars)
             groupdata=v.data[v.names[1]]
             for j in 1:length(groupdata)
                 CImGui.RadioButton(groupdata[j]["diagnosis"], v.check[1][1] == j) && (v.check[1][1] = j;)
+            end
         end
 
         is_selected = false
@@ -118,7 +119,7 @@ function show_gui()
     state = Vars()
     Renderer.render(
         ()->ui(state),
-        width=1000,
+        width=1600,
         height=700,
         title="",
         hotloading=true
