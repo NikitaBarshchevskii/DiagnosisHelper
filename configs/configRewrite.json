@@ -1,4 +1,10 @@
 {
+    "New group name 1": [
+        {
+            "ban": "New banned combination 1",
+            "diagnosis": "New phrase 1"
+        }
+    ],
     "Rhythm groups": [
         {
             "ban": [
@@ -135,7 +141,7 @@
         "Rhythm groups",
         "Rhythms",
         "Diagnoses",
-        "new entry"
+        "New group name 1"
     ],
     "Diagnoses": [
         {
@@ -191,26 +197,6 @@
                 ""
             ],
             "diagnosis": "Diagnosis 9"
-        }
-    ],
-    "new entry": [
-        {
-            "ban": [
-                ""
-            ],
-            "diagnosis": "d2"
-        },
-        {
-            "ban": [
-                ""
-            ],
-            "diagnosis": "d1"
-        },
-        {
-            "ban": [
-                ""
-            ],
-            "diagnosis": "d3"
         }
     ]
 }
