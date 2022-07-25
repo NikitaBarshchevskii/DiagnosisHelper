@@ -33,6 +33,7 @@ mutable struct Vars
     end
 end
 
+
 function ui(v::Vars)
     CImGui.Begin("Menu")
         if CImGui.TreeNode(v.names[1])
